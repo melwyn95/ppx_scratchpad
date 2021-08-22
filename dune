@@ -1,0 +1,17 @@
+(executable
+ (name main)
+ (modules main)
+ (preprocess (pps ppx_get_env ppx_incr))
+)
+
+(library
+ (name ppx_get_env)
+ (kind ppx_rewriter)
+ (modules ppx_get_env)
+ (libraries ppxlib))
+
+(library
+ (name ppx_incr)
+ (kind ppx_rewriter)
+ (modules ppx_incr)
+ (libraries ppxlib))
