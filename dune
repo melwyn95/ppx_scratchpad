@@ -1,6 +1,7 @@
 (executable
  (name main)
- (modules main)
+ (modules main hash)
+ (libraries digestif.c)
  (preprocess (pps ppx_get_env ppx_incr))
 )
 
